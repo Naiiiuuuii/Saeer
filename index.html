@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة سـيَـر</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>مرحبًا بكم في منصة سـيَـر</h1>
+        <p>منصة تهدف إلى تمكين الأفراد من التبرع بالأجهزة الإلكترونية والكهربائية الصالحة للاستخدام أو بيع الأجهزة التالفة لإعادة التدوير بطرق آمنة ومستدامة</p>
+        <button onclick="toggleLoginForm()">تسجيل الدخول</button>
+    </header>
+    
+    <main>
+        <section class="options">
+            <h2>اختر الخيار المناسب:</h2>
+            <button onclick="showDetails('تبرع')">تبرع</button>
+            <button onclick="showDetails('بيع')">بيع</button>
+            <button onclick="showDetails('شراء')">شراء</button>
+        </section>
+
+        <section id="details" class="hidden">
+            <h2>تفاصيل التبرع</h2>
+            <p>نقدم الخدمات التالية:</p>
+            <ul>
+                <li>استلام الأجهزة من المتبرعين</li>
+                <li>فحص وصيانة الأجهزة</li>
+                <li>توزيع الأجهزة على الفئات المحتاجة</li>
+                <li>خدمة البيع</li>
+            </ul>
+            <h3>الفئات التي نخدمها:</h3>
+            <ul>
+                <li>الأسر المحتاجة</li>
+                <li>الطلاب</li>
+                <li>الجمعيات الخيرية</li>
+                <li>المؤسسات التعليمية</li>
+                <li>الأفراد</li>
+            </ul>
+            <h3>خيارات التوصيل:</h3>
+            <ul>
+                <li>تسليم يدوي</li>
+                <li>توصيل إلى العنوان</li>
+            </ul>
+            <h3>خيار شكوى أو اقتراح:</h3>
+            <button onclick="showSuggestionForm()">أرسل اقتراحك</button>
+        </section>
+        
+        <div id="loginForm" class="hidden">
+            <h2>تسجيل الدخول</h2>
+            <form>
+                <label for="username">اسم المستخدم:</label>
+                <input type="text" id="username" required><br>
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" required><br>
+                <button type="submit">تسجيل الدخول</button>
+                <button type="button" onclick="toggleLoginForm()">إلغاء</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 منصة سـيَـر. جميع الحقوق محفوظة.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
